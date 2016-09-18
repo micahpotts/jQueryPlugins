@@ -6,8 +6,10 @@ $(".animsition").animsition({
   outDuration: 500
 });
 
-$(".header").sticky();
-$(".subHeader").sticky;
+$(".header").sticky({
+	getWidthFrom: ".container",
+	responsiveWidth: true
+});
 
 $(".header").on("sticky-start", function() {
 	$(".description").html("We build <strong>great</strong> apps");
@@ -17,14 +19,19 @@ $(".header").on("sticky-end", function() {
 	$(".description").html("We build apps");
 });
 
+
+$(".subHeader").sticky;
+
 $(".subHeader").sticky({
-	topSpacing: 63
+	topSpacing: 63,
+	getWidthFrom: ".container",
+	responsiveWidth: true
 });
 
 $(".subHeader").on("sticky-start", function() {
-	$(".subHeader").append("  <a href=\"#\">Email us!</a>");
+	$(this).append('  <a href="mailto:email@website.com" class="email-text">Email us!</a>');
 });
 
 $(".subHeader").on("sticky-end", function() {
-	$(".subHeader").html("Want us to work on your project?");
+	$(".email-text").remove();
 });
