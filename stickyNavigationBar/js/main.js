@@ -6,3 +6,4 @@ $(".animsition").animsition({
   outDuration: 500
 });
 
+$(".header").sticky();
