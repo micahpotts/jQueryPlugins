@@ -7,6 +7,7 @@ $(".animsition").animsition({
 });
 
 $(".header").sticky();
+$(".subHeader").sticky;
 
 $(".header").on("sticky-start", function() {
 	$(".description").html("We build <strong>great</strong> apps");
@@ -14,4 +15,16 @@ $(".header").on("sticky-start", function() {
 
 $(".header").on("sticky-end", function() {
 	$(".description").html("We build apps");
+});
+
+$(".subHeader").sticky({
+	topSpacing: 63
+});
+
+$(".subHeader").on("sticky-start", function() {
+	$(".subHeader").append("  <a href=\"#\">Email us!</a>");
+});
+
+$(".subHeader").on("sticky-end", function() {
+	$(".subHeader").html("Want us to work on your project?");
 });

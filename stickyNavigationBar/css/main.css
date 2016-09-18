@@ -350,7 +350,10 @@ footer {
   color: red;
 }
 
-
+.is-sticky .subHeader {
+  background-color: orange;
+  color: white;
+}
 
 
 
