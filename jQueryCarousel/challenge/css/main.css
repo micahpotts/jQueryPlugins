@@ -276,3 +276,8 @@ footer {
   font-size: 16px;
   color: orange;
 }
+
+.slick-dots li.slick-active button:before {
+  color: orange;
+  opacity: 100%;
+}
